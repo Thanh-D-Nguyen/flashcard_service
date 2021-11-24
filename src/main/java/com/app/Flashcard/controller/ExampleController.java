@@ -17,4 +17,10 @@ public class ExampleController {
     public List<Example> findExamples() {
         return service.getExamples();
     }
+
+    @GetMapping("/saveAllExamples")
+    public void loadAllExamples() {
+        service.insertAllExample();
+    }
+
 }

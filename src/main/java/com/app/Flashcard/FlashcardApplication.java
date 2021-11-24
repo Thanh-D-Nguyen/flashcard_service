@@ -1,6 +1,6 @@
 package com.app.Flashcard;
 
-import com.app.Flashcard.service.StorageService;
+import com.app.Flashcard.service.*;
 import com.app.Flashcard.storage.StorageProperties;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -21,6 +21,21 @@ public class FlashcardApplication {
 		return (args) -> {
 			storageService.deleteAll();
 			storageService.init();
+		};
+	}
+
+	@Bean
+	CommandLineRunner runner(ExampleService exampleService,
+							 GrammarService grammarService,
+							 KanjiService kanjiService,
+							 ViJaService viJaService,
+							 JaViService jaViService) {
+		return args -> {
+			exampleService.insertAllExample();
+//			grammarService.insertAllGrammar();
+//			kanjiService.insertAllKanji();
+//			viJaService.insertAllViJa();
+//			jaViService.insertAllJaVi();
 		};
 	}
 }

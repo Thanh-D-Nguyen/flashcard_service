@@ -16,7 +16,6 @@ import javax.persistence.Table;
 @Table(name = "GRAMMAR")
 public class Grammar {
     @Id
-    @GeneratedValue
     private long id;
     private String category;
     private String define;

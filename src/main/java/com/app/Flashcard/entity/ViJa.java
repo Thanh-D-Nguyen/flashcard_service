@@ -15,7 +15,6 @@ import javax.persistence.Table;
 @Table(name = "VIJA")
 public class ViJa {
     @Id
-    @GeneratedValue
     private long id;
     private long favorite;
     private String kind;

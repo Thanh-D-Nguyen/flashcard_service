@@ -15,10 +15,9 @@ import javax.persistence.Table;
 @Table(name = "EXAMPLE")
 public class Example {
     @Id
-    @GeneratedValue
     private long id;
     private String content;
     private String mean;
-    private long refID;
+    private long ref_id;
     private String trans;
 }

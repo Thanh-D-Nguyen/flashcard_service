@@ -16,7 +16,6 @@ import javax.persistence.Table;
 @Table(name = "JAVI")
 public class JaVi {
     @Id
-    @GeneratedValue
     private long id;
     private String mean;
     private String opposite;
