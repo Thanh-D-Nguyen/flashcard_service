@@ -14,7 +14,5 @@ public class GrammarController {
 
     @RequestMapping(value = "loadGrammar", method = RequestMethod.GET)
     public  void  loadGrammar() {
-        service.insertAllGrammar();
     }
-
 }

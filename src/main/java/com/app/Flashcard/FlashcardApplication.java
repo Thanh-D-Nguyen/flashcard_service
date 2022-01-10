@@ -23,19 +23,4 @@ public class FlashcardApplication {
 			storageService.init();
 		};
 	}
-
-	@Bean
-	CommandLineRunner runner(ExampleService exampleService,
-							 GrammarService grammarService,
-							 KanjiService kanjiService,
-							 ViJaService viJaService,
-							 JaViService jaViService) {
-		return args -> {
-			exampleService.insertAllExample();
-//			grammarService.insertAllGrammar();
-//			kanjiService.insertAllKanji();
-//			viJaService.insertAllViJa();
-//			jaViService.insertAllJaVi();
-		};
-	}
 }

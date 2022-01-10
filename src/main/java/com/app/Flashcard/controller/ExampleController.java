@@ -20,7 +20,7 @@ public class ExampleController {
 
     @GetMapping("/saveAllExamples")
     public void loadAllExamples() {
-        service.insertAllExample();
+
     }
 
 }

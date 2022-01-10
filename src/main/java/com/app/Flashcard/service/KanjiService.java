@@ -9,15 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class KanjiService extends LoadJsonFileService {
+public class KanjiService {
     @Autowired
     private KanjiRepository repository;
-
-    public void insertAllKanji() {
-        if (repository.findAll().isEmpty() == false) { return; }
-        List<Kanji> allKanji = loadJsonFile("Kanji");
-        System.out.println("Start save Kanji " + allKanji.get(0));
-        repository.saveAll(allKanji);
-        System.out.println("Done save kanji " + allKanji.get(1));
-    }
 }

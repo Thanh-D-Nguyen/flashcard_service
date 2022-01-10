@@ -22,7 +22,6 @@ public class LoadJsonFileService {
             ObjectMapper mapper = new ObjectMapper();
             JsonFactory f = new JsonFactory();
             List<T> listItems = null;
-//            File resource = ResourceUtils.getFile("classpath:JSON/" + fileName + ".json");
             URL url = ResourceUtils.getURL("classpath:JSON/" + fileName + ".json");
             JsonParser jp = f.createParser(url);
             TypeReference<List<T>> tRef = new TypeReference<List<T>>() {

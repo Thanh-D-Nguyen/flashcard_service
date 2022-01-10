@@ -20,4 +20,44 @@ public class Example {
     private String mean;
     private long ref_id;
     private String trans;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public String getMean() {
+        return mean;
+    }
+
+    public void setMean(String mean) {
+        this.mean = mean;
+    }
+
+    public long getRef_id() {
+        return ref_id;
+    }
+
+    public void setRef_id(long ref_id) {
+        this.ref_id = ref_id;
+    }
+
+    public String getTrans() {
+        return trans;
+    }
+
+    public void setTrans(String trans) {
+        this.trans = trans;
+    }
 }

@@ -18,16 +18,8 @@ import java.io.IOException;
 import java.util.List;
 
 @Service
-public class GrammarService extends LoadJsonFileService {
+public class GrammarService {
 
     @Autowired
     private GrammarRepository repository;
-
-    public void insertAllGrammar() {
-        if (repository.findAll().isEmpty() == false) { return; }
-        List<Grammar> grammars = loadJsonFile("Grammar");
-        System.out.println("Start save grammar " + grammars.get(0));
-        repository.saveAll(grammars);
-        System.out.println("Done Save grammar");
-    }
 }

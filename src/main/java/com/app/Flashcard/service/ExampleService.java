@@ -18,20 +18,11 @@ import java.io.IOException;
 import java.util.List;
 
 @Service
-public class ExampleService extends LoadJsonFileService {
+public class ExampleService {
     @Autowired
     private ExampleRepository repository;
 
     public List<Example> getExamples() {
         return repository.findAll();
-    }
-
-    public void insertAllExample() {
-        if (repository.findAll().isEmpty() == false) { return; }
-        // Load from json
-        List<Example> examples = loadJsonFile("Example");
-        System.out.println("Start save Example " + examples.get(0));
-        repository.saveAll(examples);
-        System.out.println("Done save example");
     }
 }
